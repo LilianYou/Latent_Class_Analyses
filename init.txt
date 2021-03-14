@@ -1,0 +1,71 @@
+[[init]]
+iterators = classes;
+classes = 1:5;
+filename = "C[[classes]]_LCA_BEHAV_DIS.inp";
+outputDirectory = “C:\\Input\\Your\\File\\Path\\Here\\";
+[[/init]]
+
+data:  file is ies_behav_dis.dat;
+
+variable:
+
+Names are 
+id
+FEMALE
+studyethraw
+ETHN_CMP
+do1
+do2
+do3
+do4
+do5
+do6
+do7
+psolv1
+psolv2
+psolv3
+psolv4
+psolv5
+psolv6
+psolv7
+psolv8
+SOC_STRS
+BOTHR_U;
+
+
+categorical =
+do1
+do2
+do3
+do5
+do6;
+
+usevar =
+do1
+do2
+do3
+do5
+do6;
+
+
+missing are all (999);
+
+classes = c([[classes]]);
+
+   Analysis:
+   ESTIMATOR IS MLR;
+   type = mixture;
+   STARTS = 100 10;
+   processors=8;
+
+  Model:
+ 
+  Output:
+ tech11  tech14  RES;
+plot: type= plot3;
+ series = 
+do1
+do2
+do3
+do5
+do6(*);
